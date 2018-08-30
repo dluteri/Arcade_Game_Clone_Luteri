@@ -8,13 +8,12 @@ body {
   left: 0;
   height: 100%;
   width: 100%;
-  background: rgba(0, 0, 0, 0.438);
+  background: rgba(0, 0, 0, 0.6);
 }
 
 .modal_body {
   position: relative;
   width: 400px;
-//  height: 400px;
   top: 50%;
   left: 50%;
   background: white;
@@ -24,17 +23,9 @@ body {
 
 .modal_heading {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   padding: 0 1.5rem;
-  border-bottom: 1px solid gray;
-}
-
-.modal_stats {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 1rem;
   border-bottom: 1px solid gray;
 }
 
@@ -53,4 +44,8 @@ body {
 .modal_close {
   font-weight: bold;
   font-size: 2rem;
+}
+
+.hide {
+  display: none;
 }

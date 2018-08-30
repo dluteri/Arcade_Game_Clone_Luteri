@@ -1,6 +1,4 @@
 
-
-
 // Enemies our player must avoid
 var Enemy = function(x, y, speed) {
     // Variables applied to each of our instances go here,
@@ -59,7 +57,7 @@ class Hero {
 
 render() {
       ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
-      console.log(this.x, this.y);
+      // console.log(this.x, this.y);
   }
 
 // Direction of hero's travel
@@ -110,21 +108,15 @@ reset() {
 }
 }
 
-if (player.victory === true) {
-  win.cancelAnimationFrame(id);
-  modal.classList.toggle('hide');
-}
-else {
-  id = win.requestAnimationFrame(main);
-}
 
 
-//this.victory() {
-//  $("#fade").modal({  // modal courtesy of http://jquerymodal.com/
-//    fadeDuration: 1000,
-//    fadeDelay: 1.75 // Will fade in 750ms after the overlay finishes.
-//})
-//}
+
+//   this.victory() {
+//   $("#fade").modal({  // modal courtesy of http://jquerymodal.com/
+//     fadeDuration: 1000,
+//     fadeDelay: 1.75 // Will fade in 750ms after the overlay finishes.
+//   });
+// }
 
 
 
@@ -152,3 +144,31 @@ document.addEventListener('keyup', function(e) {
 
     player.handleInput(allowedKeys[e.keyCode]);
 });
+
+// const modal = document.querySelector('.modal-bg');
+// const replay = document.querySelector('#modal-button');
+
+// replay.addEventListener('click', function() {
+//   modal.classList.toggel('hide');
+//   player.reset();
+//   player.victory = false;
+//   win.requestAnimationFrame(main);
+// });
+
+document.onload = function() {
+  const modal = document.querySelector('.modal-bg');
+  const modalBtn = document.querySelector('#modalButton');
+
+
+
+  console.log('modalBtn');
+
+  modalBtn.addEventListener('click', function(e) {
+    modal.classList.toggel('hide');
+    player.reset();
+    player.victory = false;
+    win.requestAnimationFrame(main);
+  });
+  toggleModal() // opens the modal
+  toggleModal() // closes the modal
+}
